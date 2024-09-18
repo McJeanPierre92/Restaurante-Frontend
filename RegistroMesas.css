@@ -1,0 +1,129 @@
+.reservas-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.reservas-container h1, .reservas-container h2 {
+    text-align: center;
+    color: #ff6b6b;
+    margin-bottom: 2rem;
+}
+
+.reserva-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.mesas-container {
+    margin-bottom: 2rem;
+}
+
+.mesas-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.mesa {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.mesa:hover {
+    transform: scale(1.05);
+}
+
+.mesa.disponible {
+    background-color: #90EE90;
+    border-color: #4CAF50;
+}
+
+.mesa.ocupada {
+    background-color: #FF6961;
+    border-color: #D32F2F;
+    cursor: not-allowed;
+}
+
+.mesa.seleccionada {
+    background-color: #4CAF50;
+    border-color: #45a049;
+    color: white;
+}
+
+.btn-reservar {
+    display: block;
+    width: 100%;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover:not(:disabled) {
+    background-color: #ff5252;
+}
+
+.btn-reservar:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.confirmacion-reserva {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e6f3e6;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+}
+
+.confirmacion-reserva h2 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+#detalles-reserva {
+    list-style-type: none;
+    padding: 0;
+}
+
+#detalles-reserva li {
+    margin-bottom: 0.5rem;
+}
